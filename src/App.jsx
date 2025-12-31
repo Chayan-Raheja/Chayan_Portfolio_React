@@ -8,6 +8,7 @@ import Project from './components/Project.jsx'
 import Education from './components/Education.jsx'
 import Certtraine from './components/Cert&traine.jsx'
 import Getin from './components/Getin.jsx'
+import Footer from './components/Footer.jsx'
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
       <Education />
       <Certtraine />
       <Getin />
+      <Footer />
     </div>
   )
 }

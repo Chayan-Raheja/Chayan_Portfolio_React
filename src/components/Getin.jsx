@@ -1,6 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const Getin = () => {
+
+    const [name, setname] = useState('')
+    const [email, setemail] = useState('')
+    const [subject, setsubject] = useState('')
+    const [desc, setdesc] = useState('')
+
+const [notif, setNotif] = useState(""); // message store karega
+
+    const formsub=(e)=>{
+        e.preventDefault();
+        setemail('')
+        setsubject('')
+        setdesc('')
+        setname('')
+        
+        setNotif("go"); // show message 
+        setTimeout(() => setNotif(""), 7500); // 3 sec baad hide
+    }
   return (
     <div>
       <div className='flex flex-col justify-center items-center lg:mb-44 lg:mt-65'>
@@ -47,16 +65,30 @@ const Getin = () => {
                <div className='flex flex-col  lg:gap-4'>
                 
                     <h1 className='lg:font-semibold lg:text-2xl'>Send Me a Message</h1>
-                    <div className='flex flex-col lg:w-115 lg:gap-4.5 lg:mt-1.5'>
-                        <input className='border rounded py-1 px-2'required type="text" placeholder='Your Name' />
-                        <input className='border rounded py-1 px-2'required type="email" placeholder='Your Email'/>
-                        <input className='border rounded py-1 px-2'required type="text" placeholder='Subject'/>
-                        <textarea className='border rounded py-1 px-2'required name="text" id="" placeholder='Your Message '></textarea>
+                   
+                        <form onSubmit={(e)=>{
+                            formsub(e)
+                        }} className='flex flex-col lg:w-100 lg:gap-4.5 lg:mt-1.5'>
+                                <input value={name} onChange={(e)=>{setname(e.target.value)}} 
+                                className='border rounded py-1 px-2'required type="text" placeholder='Your Name' />
+                                <input value={email} onChange={(e)=>{setemail(e.target.value)}} 
+                                className='border rounded py-1 px-2'required type="email" placeholder='Your Email'/>
+                                <input value={subject} onChange={(e)=>{setsubject(e.target.value)}} 
+                                className='border rounded py-1 px-2'required type="text" placeholder='Subject'/>
+                                <textarea value={desc} onChange={(e)=>{setdesc(e.target.value)}}
+                                className='border lg:min-h-32 rounded py-1 px-2'required name="text" id="" placeholder='Your Message '></textarea>
+                                <button className='bg-[#2463EB] active:scale-95 text-white rounded-lg border py-1.5 px-3'>Send Message</button>
+                        </form>
                         {/* <input className='border rounded py-1 px-2'required type="text" placeholder='Your Message'/> */}
-                        <button className='bg-[#2463EB] text-white rounded-lg border py-1.5 px-3'>Send Message</button>
-                    </div>
+                   
                     
-                    
+                    {/* Notification */}
+      {notif && (
+        <div className="fixed bottom-4 right-4 bg-[#f55151] text-white/95 px-6 py-6 rounded shadow-lg">
+          <h1 className='font-semibold text-lg'>Error sending message</h1>
+            <p className='mt-1'> Please try again later Or connect me directly via email.</p>
+        </div>
+      )}
                 
                 <div>
 
