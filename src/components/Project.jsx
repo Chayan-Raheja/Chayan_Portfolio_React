@@ -1,70 +1,91 @@
-import React from 'react'
+import React from "react";
 
 const Project = () => {
-
-    const probox='w-full flex flex-col max-w-2xl rounded-2xl bg-white/70 backdrop-blur-md shadow-lg border border-white/40 p-4 sm:p-5 lg:p-6 transition hover:shadow-2xl'
+  const probox =
+    "w-full max-w-2xl flex flex-col rounded-2xl bg-white/70 backdrop-blur-md shadow-lg border border-white/40 p-4 sm:p-5 lg:p-6 transition hover:shadow-2xl";
 
   return (
-    <div className=" lg:mt-40 lg:mb-70 flex flex-col items-center gap-6 lg:gap-8">
-      <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center">
+    <section className="px-4 py-12 lg:py-24">
+      <div className="flex flex-col items-center gap-6 lg:gap-10 max-w-6xl mx-auto">
+
+        {/* Heading */}
+        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center">
           My <span className="text-[#2463EB]">Projects</span>
         </h1>
 
-      <div className='flex lg:gap-4 w-full justify-center'>
-            <div className={probox}>
-                <h1 className='lg:font-semibold lg:text-lg'>Quiz Game Application</h1>
+        {/* Projects Grid */}
+        <div className="w-full flex flex-col lg:flex-row gap-6 justify-center">
 
-                <p className='text-black/65 lg:mt-2'>Developed an interactive quiz game using Java Swing for UI and MySQL for database management. Implemented backend logic for seamless UI-database communication and optimized query execution to improve performance.</p>
+          {/* ===== Project 1 ===== */}
+          <div className={probox}>
+            <h2 className="font-semibold text-base sm:text-lg">
+              Quiz Game Application
+            </h2>
 
-                <div className='flex lg:gap-2 lg:mb-3.5 lg:mt-5.5'>
-                    <h3 className='bg-[#2463EB]/10 py-1 px-4.5 rounded-2xl text-[#2463EB] text-sm'>Java</h3>
-                    <h3 className='bg-[#2463EB]/10 py-1 px-4.5 rounded-2xl text-[#2463EB] text-sm'>Mysql</h3>
-                </div>
+            <p className="text-black/70 text-sm sm:text-base mt-2">
+              Developed an interactive quiz game using Java Swing for UI and
+              MySQL for database management. Implemented backend logic for
+              seamless UI-database communication and optimized query execution
+              to improve performance.
+            </p>
 
-                <div className="flex items-center gap-2 rounded-md bg-gray-100/95 border w-fit py-1.5 px-4 my-4 cursor-pointer hover:bg-[#9E54E8] hover:text-white transition">
-                    <i className="ri-github-line"></i>
-                    <span className="lg:font-medium"><a href="#">GitHub</a></span>
-                </div>
+            {/* Tech Stack */}
+            <div className="flex flex-wrap gap-2 mt-4">
+              <span className="bg-[#2463EB]/10 px-4 py-1 rounded-2xl text-[#2463EB] text-sm">
+                Java
+              </span>
+              <span className="bg-[#2463EB]/10 px-4 py-1 rounded-2xl text-[#2463EB] text-sm">
+                MySQL
+              </span>
             </div>
 
+            {/* GitHub */}
+            <a
+              href="#"
+              className="mt-5 w-fit flex items-center gap-2 rounded-md bg-gray-100 border px-4 py-2 text-sm hover:bg-[#2463EB] hover:text-white transition"
+            >
+              <i className="ri-github-line"></i>
+              GitHub
+            </a>
+          </div>
 
+          {/* ===== Project 2 ===== */}
+          <div className={probox}>
+            <h2 className="font-semibold text-base sm:text-lg">
+              Personal Portfolio Website
+            </h2>
 
-           <div className={probox}>
-                <h1 className="lg:font-semibold lg:text-lg">
-                    Personal Portfolio Website
-                </h1>
+            <p className="text-black/70 text-sm sm:text-base mt-2">
+              Designed and developed a responsive personal portfolio website to
+              showcase skills, projects, and professional experience. Built
+              using modern frontend tools with a focus on clean UI, smooth user
+              experience, and responsive layouts across all devices.
+            </p>
 
-                <p className="text-black/65 lg:mt-2">
-                    Designed and developed a responsive personal portfolio website to showcase
-                    skills, projects, and professional experience. Built using modern frontend
-                    tools with a focus on clean UI, smooth user experience, and responsive
-                    layouts across all devices.
-                </p>
-
-                {/* Technologies */}
-                <div className="flex flex-wrap gap-2 lg:mb-3.5 lg:mt-5.5">
-                
-                    <h3 className="bg-[#2463EB]/10 py-1 px-4 rounded-2xl text-[#2463EB] text-sm">
-                    React (JSX)
-                    </h3>
-                    <h3 className="bg-[#2463EB]/10 py-1 px-4 rounded-2xl text-[#2463EB] text-sm">
-                    Tailwind CSS
-                    </h3>
-                </div>
-
-                {/* GitHub Button */}
-                <div className="flex items-center gap-2 rounded-md bg-gray-100/95 border w-fit py-1.5 px-4 my-4 cursor-pointer hover:bg-[#9E54E8] hover:text-white transition">
-                    <i className="ri-github-line"></i>
-                    <span className="lg:font-medium"><a href="#">GitHub</a></span>
-                </div>
+            {/* Tech Stack */}
+            <div className="flex flex-wrap gap-2 mt-4">
+              <span className="bg-[#2463EB]/10 px-4 py-1 rounded-2xl text-[#2463EB] text-sm">
+                React (JSX)
+              </span>
+              <span className="bg-[#2463EB]/10 px-4 py-1 rounded-2xl text-[#2463EB] text-sm">
+                Tailwind CSS
+              </span>
             </div>
 
-            
+            {/* GitHub */}
+            <a
+              href="#"
+              className="mt-5 w-fit flex items-center gap-2 rounded-md bg-gray-100 border px-4 py-2 text-sm hover:bg-[#2463EB] hover:text-white transition"
+            >
+              <i className="ri-github-line"></i>
+              GitHub
+            </a>
+          </div>
+
+        </div>
       </div>
+    </section>
+  );
+};
 
-      
-    </div>
-  )
-}
-
-export default Project
+export default Project;
