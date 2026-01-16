@@ -13,7 +13,7 @@ const Certtraine = () => {
         </h1>
 
         {/* ✅ Card aligned same as Education */}
-        <div className="mx-auto max-w-5xl bg-white/70 backdrop-blur-md shadow-lg border border-white/40 hover:shadow-2xl transition rounded-2xl p-6 lg:p-8">
+        <div className="mx-auto max-w-7xl bg-white/70 backdrop-blur-md shadow-lg border border-white/40 hover:shadow-2xl transition rounded-2xl p-6 lg:p-8">
 
           {/* Header */}
           <div className="flex flex-col md:flex-row justify-between gap-4">
@@ -34,7 +34,7 @@ const Certtraine = () => {
             </div>
 
             {/* ✅ Mobile left indent only */}
-            <div className="flex items-center gap-2 text-gray-500 ml-12 md:ml-0">
+            <div className="flex items-center gap-2 text-gray-500 ml-14 md:ml-0">
               <i className="ri-calendar-line"></i>
               <span className="text-xs sm:text-sm">
                 Sep 2025 – Present
@@ -44,7 +44,7 @@ const Certtraine = () => {
 
           {/* Description */}
           <div className="flex gap-4 mt-6">
-            <i className="ri-book-open-line text-[#2463EB] text-xl sm:text-2xl mt-1"></i>
+            <i className="ri-book-open-line text-[#2463EB] text-xl sm:text-2xl mt-1 mx-2"></i>
             <p className="text-black/65 text-sm sm:text-base lg:text-lg leading-relaxed">
               Currently pursuing intensive training in full-stack web
               development with focus on modern JavaScript technologies.
@@ -55,7 +55,7 @@ const Certtraine = () => {
 
           {/* Tech Stack */}
           <div className="flex gap-4 items-start mt-5">
-            <i className="ri-code-s-slash-line text-[#2463EB] text-xl sm:text-2xl mt-1"></i>
+            <i className="ri-code-s-slash-line text-[#2463EB] text-xl sm:text-2xl mt-1 mx-2"></i>
 
             <div className="flex flex-wrap gap-2">
               {["HTML", "CSS", "Tailwind CSS", "JavaScript", "React JS"].map(
